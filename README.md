@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# PASTELERÍA JEANPIERRE: PARA COMPARTIR CON TUS SERES QUERIDOS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Notas:
 
-Currently, two official plugins are available:
+- debo meterme mas en lo que es el tipado con typescript: Perdí mucho tiempo en algunas ocasiones
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### test: Componente Services, renderiza segun el tipo de producto, mediante el atributo "type"
 
-## Expanding the ESLint configuration
+```javascript
+<section className="flex flex-col gap-9">
+  <div className="bg-red-500 p-12">
+    <h1 className="text-green-500">SECCION 1</h1>
+    <Services type="PARA MOSTRAR" />
+  </div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+  <div className="bg-green-500 p-12">
+    <h1 className="text-white">SECCION 2</h1>
+    <Services type="PARA COMPRAR" />
+  </div>
+</section>
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
