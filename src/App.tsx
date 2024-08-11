@@ -14,10 +14,12 @@ function App() {
       const fieldsMapped = data.includes.Asset.map((datas: Items) => datas.fields);
       setFields(fieldsMapped)
     })
-  }, [])
+  }, []);
+
+
   return (
     <div>
-      <div className="min-h-[100vh] bg-[#3C4977]">
+      <div className="min-h-[100vh] ">
         <header className="h-24 flex">
           <button className="bg-[#A94FA5] rounded-br-[2rem] h-20 flex flex-col text-white justify-center p-3 gap-3 ">
             <span className="h-2 w-14 bg-white rounded"></span>
@@ -26,28 +28,24 @@ function App() {
           </button>
         </header>
         <img className="m-auto mt-7 rounded-full " src={logo} alt="Pasteleria Tortas JeanPierre" width={350} />
-        <h3 className="text-[3rem] text-presentation text-[#C4F9CA] p-10 text-center mt-14">
+        <h3 className="text-presentation">
           Bienvenidos a <br /><span className="text-[#8B73FF]">Jeanpierre Pastelería</span><br />el lugar donde cada elección se convierte en una experiencia exquisita.
         </h3>
-
-      </div>
-      <main>
         <Whatsapp />
-        <section className="flex flex-col mt-40 justify-center items-center gap-5">
-          {/* <Services items={fields} /> */}
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
-          <Card title="Chin" imgUrl={image} />
+      </div>
+      <main className=" bg-[#CD7FB1] flex flex-col justify-center items-center">
+        <h3 className="text-subtitle p-12">QUE HAGO</h3>
+        <section className="pt-[12rem ">
+          <Services items={fields} />
+        </section>
+        <h3 className="text-subtitle p-12">EVENTOS ESPECIALES</h3>
+        <section className="pt-[12rem ">
+          <Services items={fields} type="especial" />
         </section>
       </main>
     </div>
   )
 }
-
 export default App
 
 

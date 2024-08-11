@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;800&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    @apply bg-body-image;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/Sucre Patisserie Branding Project.jpeg");
+    /* @apply bg-body-image;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/Sucre Patisserie Branding Project.jpeg"); */
 }
 
 .header-menu {
@@ -13,7 +14,9 @@ body {
 }
 
 .text-presentation {
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    @apply font-["Lobster"] font-normal text-[2.5rem] sm:text-[3rem] p-10 text-center mt-14;
+}
+
+.text-subtitle {
+    @apply font-["Abhaya-Libre"] font-black text-[2.5rem] sm:text-[3rem] text-[#C4F9CA] text-center mt-14;
 }
