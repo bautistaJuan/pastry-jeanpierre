@@ -1,12 +1,12 @@
 
 export default function Card({ title, imgUrl }: { title: string, imgUrl: string }) {
     return (
-        <div className="flex flex-col rounded-2xl w-[22rem] lg:w-96 bg-transparent shadow-sm shadow-[#84466d] mb-7">
-            <figure className="flex justify-center items-center rounded-2xl">
-                <img src={imgUrl} alt="Card Preview" className="rounded-t-2xl h-[20rem] w-[22rem]" />
+        <div className="flex flex-col  w-[11.5rem] sm:w-[15rem] sm:h-[21rem] bg-white shadow-lg hover:shadow-2xl ">
+            <figure className="flex justify-center items-center">
+                <img src={imgUrl} alt="Card Preview" className=" h-[13rem] sm:h-[15rem] w-[11.5rem] sm:w-[15rem]" />
             </figure>
             <div className="flex flex-col p-4">
-                <div className="text-2xl font-bold uppercase  text-[#30456E] text-center">{title}</div>
+                <div className="text-[1rem] sm:text-[1.6rem] font-medium uppercase">{title}</div>
             </div>
         </div>
     )

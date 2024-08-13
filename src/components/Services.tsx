@@ -5,8 +5,8 @@ type TypeItem = 'servicios' | 'especial';
 
 export default function Services({ items, type }: { items: Items[], type?: TypeItem }) {
 
-    const itemsSinDescription = items.filter(item => !item.description)
-    const itemsConDescription = items.filter(item => item.description)
+    const itemsSinDescription = items.filter(item => !item.description);
+    const itemsConDescription = items.filter(item => item.description);
 
     return (
         <>
