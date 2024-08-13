@@ -19,7 +19,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="">
       <div className="min-h-[100vh] bg-[#8b73ff] ">
         <header className="h-24 flex ">
           <button className="sm:hidden bg-[#A94FA5] rounded-br-[2rem] h-20 flex flex-col text-white justify-center p-3 gap-3 ">
@@ -30,11 +30,11 @@ function App() {
         </header>
         <img className="m-auto mt-7 rounded-full drop-shadow-2xl" src={logo} alt="Pasteleria Tortas JeanPierre" width={350} />
         <h3 className="text-presentation">
-          Bienvenidos a <span className="text-white font-extrabold">Jeanpierre Pastelería</span><br />el lugar donde cada elección se convierte en una experiencia exquisita.
+          <span className="text-white font-extrabold">Jeanpierre<br /> Pastelería y Repostería</span><br />el lugar donde cada elección se convierte en una experiencia exquisita.
         </h3>
         <Whatsapp />
       </div>
-      <main className=" flex flex-col justify-center items-center bg-body-image">
+      <main className="flex flex-col justify-center ">
         <h3 className="text-subtitle p-12">CREACIONES</h3>
         <section className="sections">
           <Services items={fields} />
